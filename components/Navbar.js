@@ -6,7 +6,6 @@ import AuthContext from '../stores/authContext'
 export default function Navbar() {
   
   const { user, login, logout,authReady } = useContext(AuthContext)
-  console.log(user);
 
   return (
     <div className="container">
@@ -21,7 +20,8 @@ export default function Navbar() {
             {user && <li>{ user.email }</li>}
             {user && <li onClick={logout} className="btn">Log out</li>}
           </ul>
-        )}
+        )
+        }
       </nav>
       <div className="banner">
         <Image src="/banner.png" width={966} height={276} />
